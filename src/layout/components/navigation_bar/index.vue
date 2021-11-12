@@ -9,10 +9,7 @@
         trigger="click"
       >
         <div class="avatar-wrapper">
-          <img
-            :src="avatar + '?imageView2/1/w/80/h/80'"
-            class="user-avatar"
-          >
+          <img :src="avatar + '?imageView2/1/w/80/h/80'" class="user-avatar" />
         </div>
         <template #dropdown>
           <el-dropdown-menu>
@@ -42,22 +39,22 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Hamburger from "@/components/hamburger/index.vue";
-import Screenfull from '@/components/screenfull/index.vue';
-import BreadCrumb from '@/components/bread-crumb/index.vue'
+import Screenfull from "@/components/screenfull/index.vue";
+import BreadCrumb from "@/components/bread-crumb/index.vue";
 
 export default defineComponent({
   components: {
     Hamburger,
     Screenfull,
-    BreadCrumb
+    BreadCrumb,
   },
   setup() {
     const toggleSideBar = () => {
-      console.log('23223')
+      console.log("23223");
     };
     return {
       toggleSideBar,
-      avatar: ''
+      avatar: "",
     };
   },
 });

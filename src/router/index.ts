@@ -14,8 +14,20 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/",
+    redirect: "/dashboard",
     meta: {},
     component: Layout,
+    children: [
+      {
+        path: "dashboard",
+        name: "Dashboard",
+        meta: {
+          title: "dashboard",
+          affix: true,
+        },
+        component: () => import("@/views/dashboard/index.vue"),
+      },
+    ],
   },
 ];
 

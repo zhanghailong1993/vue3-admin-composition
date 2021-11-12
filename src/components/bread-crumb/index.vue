@@ -1,16 +1,11 @@
 <template>
-  <el-breadcrumb
-    class="app-breadcrumb"
-    separator-class="el-icon-arrow-right"
-  >
+  <el-breadcrumb class="app-breadcrumb" separator-class="el-icon-arrow-right">
     <el-breadcrumb-item>首页</el-breadcrumb-item>
   </el-breadcrumb>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-export default defineComponent({
-  
-})
+export default defineComponent({});
 </script>
 <style lang="scss" scoped>
 .el-breadcrumb__inner,

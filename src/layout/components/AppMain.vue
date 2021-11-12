@@ -4,21 +4,21 @@
   </section>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { useRoute } from 'vue-router'
+import { defineComponent } from "vue";
+import { useRoute } from "vue-router";
 
 export default defineComponent({
   setup() {
-    const route = useRoute()
+    const route = useRoute();
 
     const key = () => {
-      return route.path
-    }
+      return route.path;
+    };
     return {
-      key
-    }
-  }
-})
+      key,
+    };
+  },
+});
 </script>
 <style lang="scss" scoped>
 .app-main {

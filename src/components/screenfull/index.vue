@@ -8,22 +8,22 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from "vue";
 import { FullScreen } from "@element-plus/icons";
-import { useFullscreen } from '@vueuse/core';
+import { useFullscreen } from "@vueuse/core";
 
 export default defineComponent({
   components: {
-    FullScreen
+    FullScreen,
   },
   setup() {
-    const { toggle } = useFullscreen()
+    const { toggle } = useFullscreen();
     const state = reactive({
       isFullscreen: false,
       click: () => {
-        toggle()
-      }
-    })
+        toggle();
+      },
+    });
     return {
-      ...toRefs(state)
+      ...toRefs(state),
     };
   },
 });

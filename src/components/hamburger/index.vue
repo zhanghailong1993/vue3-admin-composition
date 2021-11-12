@@ -1,6 +1,8 @@
 <template>
   <div :class="[{ 'is-active': isActive }]" @click="toggleClick">
-    <el-icon class="icon"><fold v-show="!isActive" /><expand v-show="isActive"></expand></el-icon>
+    <el-icon class="icon"
+      ><fold v-show="!isActive" /><expand v-show="isActive"></expand
+    ></el-icon>
   </div>
 </template>
 <script lang="ts">
@@ -15,7 +17,7 @@ export default defineComponent({
   },
   components: {
     Fold,
-    Expand
+    Expand,
   },
   emits: ["toggle-click"],
   setup(_, context) {

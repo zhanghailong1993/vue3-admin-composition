@@ -25,14 +25,14 @@
 </template>
 <script lang="ts">
 import { defineComponent, computed, PropType } from "vue";
-import { RouteRecordRaw } from 'vue-router';
+import { RouteRecordRaw } from "vue-router";
 
 export default defineComponent({
   name: "SidebarItem",
   props: {
     item: {
       type: Object as PropType<RouteRecordRaw>,
-      require: true
+      require: true,
     },
   },
   setup(props) {

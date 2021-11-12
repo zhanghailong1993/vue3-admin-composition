@@ -18,7 +18,7 @@ export default defineComponent({
   components: {
     Sidebar,
     Navbar,
-    AppMain
+    AppMain,
   },
 });
 </script>
