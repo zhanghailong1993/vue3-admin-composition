@@ -29,6 +29,42 @@ const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
+  {
+    path: "/clipboard",
+    name: "clipboard",
+    component: Layout,
+    meta: {},
+    children: [
+      {
+        path: "index",
+        name: "Clipboard",
+        meta: {
+          title: "clipboard",
+          icon: "#iconcopy",
+        },
+        component: () => import("@/views/clipboard/index.vue"),
+      },
+    ],
+  },
+  {
+    path: "/components",
+    name: "Components",
+    component: Layout,
+    meta: {
+      title: 'components',
+      icon: '#iconcomponent'
+    },
+    children: [
+      {
+        path: "tinymce",
+        name: "TinymceDemo",
+        meta: {
+          title: "tinymce"
+        },
+        component: () => import("@/views/components-demo/TinymceModulesDemo.vue"),
+      },
+    ],
+  },
 ];
 
 const router = createRouter({
