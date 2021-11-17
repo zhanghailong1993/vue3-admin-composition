@@ -51,17 +51,36 @@ const routes: Array<RouteRecordRaw> = [
     name: "Components",
     component: Layout,
     meta: {
-      title: 'components',
-      icon: '#iconcomponent'
+      title: "components",
+      icon: "#iconcomponent",
     },
     children: [
       {
         path: "tinymce",
         name: "TinymceDemo",
         meta: {
-          title: "tinymce"
+          title: "tinymce",
         },
-        component: () => import("@/views/components-demo/TinymceModulesDemo.vue"),
+        component: () =>
+          import("@/views/components-demo/TinymceModulesDemo.vue"),
+      },
+      {
+        path: "back-to-top",
+        name: "BackToTopDemo",
+        meta: {
+          title: "backToTop",
+          noCache: true,
+        },
+        component: () => import("@/views/components-demo/BackToTopDemo.vue"),
+      },
+      {
+        path: "componentMixin",
+        name: "MixinDemo",
+        meta: {
+          title: "componentMixin",
+          noCache: true,
+        },
+        component: () => import("@/views/components-demo/MixinDemo.vue"),
       },
     ],
   },

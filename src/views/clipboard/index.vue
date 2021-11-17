@@ -5,13 +5,10 @@
         <el-input
           v-model="inputData"
           placeholder="Please input"
-          style="width: 400px; max-width: 100%; margin-right: 10px;"
+          style="width: 400px; max-width: 100%; margin-right: 10px"
         />
-        <el-button
-          type="primary"
-          @click="copy(inputData)"
-        >
-        <el-icon><document-copy /></el-icon>
+        <el-button type="primary" @click="copy(inputData)">
+          <el-icon><document-copy /></el-icon>
           copy
         </el-button>
       </el-tab-pane>
@@ -19,13 +16,10 @@
         <el-input
           v-model="inputData"
           placeholder="Please input"
-          style="width: 400px; max-width: 100%; margin-right: 10px;"
+          style="width: 400px; max-width: 100%; margin-right: 10px"
         />
-        <el-button
-          type="primary"
-          @click="copy(inputData)"
-        >
-        <el-icon><document-copy /></el-icon>
+        <el-button type="primary" @click="copy(inputData)">
+          <el-icon><document-copy /></el-icon>
           copy
         </el-button>
       </el-tab-pane>
@@ -39,18 +33,18 @@ import { useClipboard } from "@vueuse/core";
 
 export default defineComponent({
   components: {
-    DocumentCopy
+    DocumentCopy,
   },
   setup() {
     const dataMap = reactive({
       activeName: "directly",
-      inputData: "https://github.com/Armour/vue-typescript-admin-template"
+      inputData: "https://github.com/Armour/vue-typescript-admin-template",
     });
-    const { copy } = useClipboard()
+    const { copy } = useClipboard();
 
     return {
       ...toRefs(dataMap),
-      copy
+      copy,
     };
   },
 });
